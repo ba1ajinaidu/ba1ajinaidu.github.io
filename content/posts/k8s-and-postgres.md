@@ -175,7 +175,7 @@ So, is it safe to run Postgres databases on a Kubernetes cluster?
 
 If you are running 1 Postgres database on a cluster, you can schedule the Postgres pods on particular nodes using taints and tolerations where you have enabled hugepages, and it can use all the hugepages of the underlying node. But if you want to run multiple databases on a cluster, then Postgres won't play nice with k8s; it's not very reliable, and you might face these issues. And obviously, you can always go back and disable hugepages and run multiple databases on a cluster; you'll lose all the performance advantages provided by hugepages, and the OOM Killer can crash the Postgres processes, as explained in the article by Percona.
 
-
+I'm not a expert, if someone has a solution/work around for this issue, please let me know :)
 ### References
 
 1. [More about page tables in linux](https://lwn.net/Articles/717293/)

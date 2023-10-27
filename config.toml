@@ -45,7 +45,7 @@ enableEmoji = true
   avatar = "kool_flork.jpeg"
   intro = "ba1ajinaidu"
   name = "Balajinaidu V"
-  description = "Complete Technical Works"
+  description = "Nerding out online"
 
 [[params.socialIcons]] 
  name = "github" 
