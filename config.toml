@@ -1,0 +1,60 @@
+title = 'ba1ajinaidu'
+baseURL = 'https://ba1ajinaidu.github.io'
+languageCode = 'en-us'
+theme = "blog-awesome"
+
+# Enable emojis globally
+enableEmoji = true
+
+[outputs]
+    home = [ 'HTML', 'RSS']
+
+[menu]
+  [[menu.main]] 
+    pageRef="/"
+    name = 'Home'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    pageRef="posts"
+    name = 'Posts'
+    url = '/posts/'
+    weight = 30
+  [[menu.main]]
+    pageRef="projects"
+    name = 'Projects'
+    url = '/projects/'
+    weight = 40
+  [[menu.main]]
+    pageRef="about"
+    name = 'About'
+    url = '/about/'
+    weight = 40
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+
+[params]
+  sitename = ""
+  defaultColor = "auto"
+  mainSections = ["posts"]
+  goToTop = true
+
+[params.author]
+  avatar = "kool_flork.jpeg"
+  intro = "ba1ajinaidu"
+  name = "Balajinaidu V"
+  description = "Complete Technical Works"
+
+[[params.socialIcons]] 
+ name = "github" 
+ url = "https://github.com/ba1ajinaidu" 
+  
+ [[params.socialIcons]] 
+ name = "twitter" 
+ url = "https://twitter.com/ba1ajinaidu" 
+
+ [[params.socialIcons]] 
+ name = "Rss" 
+ url = "index.xml" 
