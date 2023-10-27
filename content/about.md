@@ -1,4 +1,4 @@
-### ABOUT
+### $whoami
 
 ![Image](/balaji.jpeg#center)
 
@@ -6,10 +6,12 @@
  
  My interests are broad, including but not limited to Kubernetes, eBPF, Databases, Computer Networks and Distributed Systems. I am learning about internals of storage engines/databases, if you have some nice recommendations hit me up.
  
-### Online presence
+When I'm not staring at the screen like a mad man, I am probably hiking ⛰️.
 
-[Twitter](https://twitter.com/ba1ajinaidu)  
-[Github](https://github.com/ba1ajinaidu)  
-[LinkedIn](https://www.linkedin.com/in/ba1ajinaidu/)
+### where can yu find me online
+
+Twitter [@ba1ajinaidu](https://twitter.com/ba1ajinaidu)  
+github [@ba1ajinaidu](https://github.com/ba1ajinaidu)  
+LinkedIn [@ba1ajinaidu](https://www.linkedin.com/in/ba1ajinaidu/)
 
 

@@ -1,5 +1,5 @@
 +++
-title = 'Is it safe to run postgres on kubernetes?'
+title = 'Is it safe to run Postgres on Kubernetes?'
 date = 2023-10-26T00:09:29+05:30
 draft = false
 +++
