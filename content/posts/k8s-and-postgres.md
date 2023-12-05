@@ -176,6 +176,12 @@ So, is it safe to run Postgres databases on a Kubernetes cluster?
 If you are running 1 Postgres database on a cluster, you can schedule the Postgres pods on particular nodes using taints and tolerations where you have enabled hugepages, and it can use all the hugepages of the underlying node. But if you want to run multiple databases on a cluster, then Postgres won't play nice with k8s; it's not very reliable, and you might face these issues. And obviously, you can always go back and disable hugepages and run multiple databases on a cluster; you'll lose all the performance advantages provided by hugepages, and the OOM Killer can crash the Postgres processes, as explained in the article by Percona.
 
 I'm not a expert, if someone has a solution/work around for this issue, please let me know :)
+
+
+### Update (5th Dec 2023)
+
+This is fixed now in runc in this [merge request](https://github.com/opencontainers/runc/pull/4077/) which is contained in the [1.1.10](https://github.com/opencontainers/runc/releases/tag/v1.1.10) release 🎉 and also fixed in [containerd 1.7.9](https://github.com/containerd/containerd/pull/9359). After upgrading to the new release, for the new fix to work on your containers/pods you should make a small config change in containerd, you need to set `disable_hugetlb_controller = false` in `/etc/containerd/config.toml` which is the default path for the containerd config. 
+
 ### References
 
 1. [More about page tables in linux](https://lwn.net/Articles/717293/)
