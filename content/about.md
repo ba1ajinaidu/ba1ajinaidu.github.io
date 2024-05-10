@@ -2,7 +2,7 @@
 
 ![Image](/balaji.jpeg#center)
 
- Hey there 👋, I'm Balajinaidu. I work as a Site reliability engineer(SRE) at [Civo](www.civo.com). I graduated from [NITK Surathkal](https://www.nitk.ac.in/) in 2023 with a major in Electronics and Communication Engineering. 
+ Hey there 👋, I'm Balajinaidu. I work as a Software Engineer at [Fennel AI](https://fennel.ai). I graduated from [NITK Surathkal](https://www.nitk.ac.in/) in 2023 with a major in Electronics and Communication Engineering. 
  
  My interests are broad, including but not limited to Kubernetes, eBPF, Databases, Computer Networks and Distributed Systems. I am learning about internals of storage engines/databases, if you have some nice recommendations hit me up.
  
