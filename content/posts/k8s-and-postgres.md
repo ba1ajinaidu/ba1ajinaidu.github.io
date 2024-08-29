@@ -9,7 +9,7 @@ Recently, I encountered an issue while restoring a backup of a PostgreSQL databa
 ```
 LOG:  server process (PID 497) was terminated by signal 7: Bus error
 ```
-A bus error is a signal raised by hardware when a process tries to access a part of memory that the CPU cannot address physically. This was the first time I encountered a bus error in Kubernetes, and I was curious to see what was causing it. So the Postgres pod/container is trying to access memory, which doesn't exist(or it's not accessible by the container 😉). The first thing to look for was resource limits/requests in pod spec and check if Postgres was trying to access/allocate more than the limit.
+A bus error is a signal raised by hardware when a process tries to access a part of memory that the CPU cannot address physically. This was the first time I encountered a bus error in Kubernetes, and I was curious to see what was causing it. So the Postgres pod/container is trying to access memory, which doesn't exist(or it's not accessible by the container). The first thing to look for was resource limits/requests in pod spec and check if Postgres was trying to access/allocate more than the limit.
 
 ```
 resources:
@@ -45,7 +45,7 @@ When memory is not tuned correctly, databases try to use up all the memory on th
 I was still unsure if the SIGBUS was because of hugepages in the Postgres pod/container. To confirm this, I had a simple plan.
 
 - Allocate 128Mi/2Mi = 64 hugepages inside the pod and see if it works fine without error.
-- Allocate 100 hugepages(which is more than the configured limit set on pod spec) - it should throw an error, right? It didn't 🧐
+- Allocate 100 hugepages(which is more than the configured limit set on pod spec) - it should throw an error, right?..right? - It didn't 🧐
 - Allocate 100 hugepages and try to write to the allocated memory
 
 Wrote simple C programs to do this:
